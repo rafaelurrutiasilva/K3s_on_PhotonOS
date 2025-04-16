@@ -8,6 +8,11 @@
 <br>
 Photon OS, VMware’s lightweight Linux distribution, is well-suited for containerized workloads. Combined with K3s, a lightweight Kubernetes distribution by Rancher, it provides a minimal and efficient environment for running Kubernetes clusters on virtualized infrastructure. This guide covers the basic steps to install and run K3s on Photon OS.
 
+## Goals
+Provide a concise guide for installing a Kubernetes cluster consisting of one Control Plane and three Worker Nodes, using K3s on Photon OS.
+
+## Method
+
 ## Environment
 The following computer environment was utilized. For details regarding container image versions and other components, please refer to the respective sections in the application documentation available here.
 ```
@@ -30,3 +35,22 @@ iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 iptables-save > /etc/systemd/scripts/ip4sav
 ```
 
+## Basic installation of K3s
+The [Install Script](https://docs.k3s.io/quick-start#install-script) is convenient way to install it as a service on systemd. 
+```
+curl -sfL https://get.k3s.io | sh -
+```
+After running this installation:
+* The K3s service will be configured to automatically.
+* Additional utilities will be installed, including kubectl, crictl, ctr, k3s-killall.sh, and k3s-uninstall.sh
+* A kubeconfig file will be written to /etc/rancher/k3s/k3s.yaml and the kubectl installed by K3s will automatically use it.
+
+### Controll after running the installation script
+* Check service is running
+```
+systemctl status k3s.service
+```
+* Check Kubernetes node
+```
+kubectl get node
+```
