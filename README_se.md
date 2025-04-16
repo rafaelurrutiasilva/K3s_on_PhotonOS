@@ -6,6 +6,9 @@
 
 Photon OS, VMwares lättviktiga Linux-distribution, är väl lämpad för containerbaserade arbetslaster. I kombination med K3s, en lättviktig Kubernetes-distribution från Rancher, erbjuder den en minimal och effektiv miljö för att köra Kubernetes-kluster på virtualiserad infrastruktur. Denna guide beskriver de grundläggande stegen för att installera och köra K3s på Photon OS.
 
+## Mål
+En kortfattad guide för att installera ett Kubernetes-kluster med en kontrollnod (Control Plane) och tre arbetarnoder (Worker Nodes), baserat på K3s och körande på Photon OS.
+
 ## Miljö för denna uppsättning
 Följande datormiljö användes. För detaljer om versioner av containeravbildningar och andra komponenter, se respektive avsnitt i applikationens dokumentation som finns tillgänglig här.
 ```
