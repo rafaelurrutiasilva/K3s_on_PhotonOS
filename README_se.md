@@ -16,9 +16,11 @@ Virtual Machine: 1vCPU, 2GB vRAM, 16GB vDisk
 ```
 
 ## Grundläggande konfiguration av Photon OS
-Sätta namn på noden, ta bort docker, köra systemuppdatering, konfigurera brandvägger för ICMP och SSH.
+Sätta namn på noden, sätt roots passwd och att den aldrig går ut, ta bort docker, köra systemuppdatering, konfigurera brandvägger för ICMP och SSH.
 ```
 hostnamectl hostname k3s-control01 # (or k3s-worker01 or k3s-worker02 ..)                                                             
+passwd [the new root passwd]
+chage -I -1 -m 0 -M 99999 -E -1 root
 tdnf remove docker
 tdnf update -y
 iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
