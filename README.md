@@ -27,6 +27,6 @@ tdnf remove docker
 tdnf update -y
 iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
-
+iptables-save > /etc/systemd/scripts/ip4sav
 ```
 
