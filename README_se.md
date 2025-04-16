@@ -8,6 +8,8 @@ Photon OS, VMwares lättviktiga Linux-distribution, är väl lämpad för contai
 
 ## Mål
 En kortfattad guide för att installera ett Kubernetes-kluster med en kontrollnod (Control Plane) och tre arbetarnoder (Worker Nodes), baserat på K3s och körande på Photon OS.
+Metod
+Vi börjar med att använda standarddistributionen av Photon OS version 5, ta bort onödiga komponenter, uppdatera systemet och genomföra grundläggande konfiguration av operativsystemet.
 
 ## Miljö för denna uppsättning
 Följande datormiljö användes. För detaljer om versioner av containeravbildningar och andra komponenter, se respektive avsnitt i applikationens dokumentation som finns tillgänglig här.
