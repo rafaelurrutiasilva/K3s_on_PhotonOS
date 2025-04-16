@@ -16,7 +16,7 @@ Virtual Machine: 1vCPU, 2GB vRAM, 16GB vDisk
 ```
 
 ## Grundläggande konfiguration av Photon OS
-Sätta namn på noden, ta bort docker, köra systemuppdatering, konfigurera brandvägger för ICMP och ssh.
+Sätta namn på noden, ta bort docker, köra systemuppdatering, konfigurera brandvägger för ICMP och SSH.
 ```
 hostnamectl hostname k3s-control01 # (or k3s-worker01 or k3s-worker02 ..)                                                             
 tdnf remove docker
