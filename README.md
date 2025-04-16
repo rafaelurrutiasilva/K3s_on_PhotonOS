@@ -6,3 +6,23 @@
 <br>
 <br>
 Photon OS, VMware’s lightweight Linux distribution, is well-suited for containerized workloads. Combined with K3s, a lightweight Kubernetes distribution by Rancher, it provides a minimal and efficient environment for running Kubernetes clusters on virtualized infrastructure. This guide covers the basic steps to install and run K3s on Photon OS.
+
+## Environment
+The following computer environment was utilized. For details regarding container image versions and other components, please refer to the respective sections in the application documentation available here.
+```
+ESXi version: 8.0.0
+ESXi build number: 20513097
+VMware Photon OS: Version 5.0
+Virtual Machine: 1vCPU, 2GB vRAM, 16GB vDisk
+```
+
+## Basic Configuration of the Photon OS VM
+Setting hostname, running update, installing sudo and creating the user labuser.
+```
+hostnamectl hostname k3s-control01 # (or k3s-worker01 or k3s-worker02 ..)                                                             
+tdnf remove docker
+tdnf update -y
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+```
+
