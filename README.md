@@ -24,7 +24,7 @@ Virtual Machine: 1vCPU, 2GB vRAM, 16GB vDisk
 ```
 
 ## Basic Configuration of the Photon OS VM
-Setting hostname, set roots passwd and never expire, removing docker, running update, configuring firelwall for ICMP and SSH.
+Setting hostname, setting root’s password and marking it non-expiring, removing Docker, updating system packages, configuring firewall to allow ICMP and SSH.
 ```
 hostnamectl hostname k3s-control01 # (or k3s-worker01 or k3s-worker02 ..)                                                             
 passwd [the new root passwd]
