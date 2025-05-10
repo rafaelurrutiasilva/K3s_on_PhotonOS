@@ -11,6 +11,9 @@ Photon OS, VMware’s lightweight Linux distribution, is well-suited for contain
 ## Goals
 Provide a concise guide for installing a Kubernetes cluster consisting of one Control Plane and three Worker Nodes, using K3s on Photon OS.
 
+## Status
+In Progress
+
 ## Method
 We will start by using the default Photon OS version 5 distribution, remove unnecessary components, update the system, and perform basic OS configuration.
 
